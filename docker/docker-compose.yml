@@ -1,0 +1,17 @@
+version: '2.3'
+
+services:
+
+  tex2shape:
+    image: tex2shape
+    container_name: tex2shape
+    working_dir: /tex2shape
+    build:
+      context: ../
+      dockerfile: docker/Dockerfile
+    environment:
+      - PYTHONPATH=/tex2shape
+    volumes:
+      - ../:/tex2shape
+    runtime: nvidia
+    command: tail /dev/null -f

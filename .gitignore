@@ -7,3 +7,5 @@ vendor/smpl
 __pycache__/
 *.py[cod]
 *$py.class
+
+mpg_models/

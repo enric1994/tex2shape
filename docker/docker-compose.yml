@@ -14,4 +14,4 @@ services:
     volumes:
       - ../:/tex2shape
     runtime: nvidia
-    command: tail /dev/null -f
+    command: cp -r /mpg_models/smpl/smpl_webuser/* /tex2shape/vendor/smpl/;tail /dev/null -f

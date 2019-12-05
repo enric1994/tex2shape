@@ -1,7 +1,6 @@
 .idea/
 .DS_Store
 
-vendor/smpl
 !vendor/smpl/__init__.py
 
 __pycache__/
@@ -9,3 +8,5 @@ __pycache__/
 *$py.class
 
 mpg_models/
+assets/
+*.hdf5

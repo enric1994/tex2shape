@@ -1,5 +1,5 @@
-from keras.models import Model
-from keras.layers import Input, Conv2D, UpSampling2D, Concatenate, Dropout, LeakyReLU, BatchNormalization
+from tensorflow.keras.models import Model
+from tensorflow.keras.layers import Input, Conv2D, UpSampling2D, Concatenate, Dropout, LeakyReLU, BatchNormalization
 
 from base_model import BaseModel
 

@@ -2,7 +2,7 @@
 
 This repository contains code corresponding to the paper [**Tex2Shape: Detailed Full Human Body Geometry from a Single Image**](https://arxiv.org/abs/1904.08645).
 
-## Installation
+## Manual installation
 
 Download and unpack the SMPL model from http://smpl.is.tue.mpg.de/ and link the files to the `vendor` directory.
 ```
@@ -21,20 +21,23 @@ Download pre-trained model weights from [here](https://drive.google.com/open?id=
 unzip <downloads_folder>/weights_tex2shape.zip -d weights
 ```
 
-
-## Usage
-
-We provide a run script (`run.py`) and sample data for single subject and batch processing.
-The script outputs usage information when executed without parameters.
-
-### Quick start
-
 We provide sample scripts for both modes:
 
 ```
 bash run_demo.sh
 bash run_batch_demo.sh
 ```
+
+## Docker quick start
+
+
+
+
+## Usage
+
+We provide a run script (`run.py`) and sample data for single subject and batch processing.
+The script outputs usage information when executed without parameters.
+
 
 ## Data preparation
 

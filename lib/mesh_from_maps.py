@@ -1,11 +1,12 @@
+from __future__ import absolute_import
 import sys
 import os
 
 import numpy as np
 import scipy.sparse as sp
 
-from smpl import Smpl
-from maps import normalize
+from .smpl import Smpl
+from .maps import normalize
 
 if sys.version_info[0] == 3:
     import _pickle as pkl
@@ -17,11 +18,11 @@ class MeshFromMaps:
 
     def __init__(self):
 
-        with open(os.path.join(os.path.dirname(__file__), '../assets/hres.pkl'), 'r') as f:
-            self.hres = pkl.load(f)
+        with open(os.path.join(os.path.dirname(__file__), '../assets/hres.pkl'), 'rb') as f:
+            self.hres = pkl.load(f, encoding='latin1')
 
-        with open(os.path.join(os.path.dirname(__file__), '../assets/neutral_smpl.pkl'), 'r') as f:
-            model_data = pkl.load(f)
+        with open(os.path.join(os.path.dirname(__file__), '../assets/neutral_smpl.pkl'), 'rb') as f:
+            model_data = pkl.load(f, encoding='latin1')
 
         model_data = self._make_hres(model_data)
 

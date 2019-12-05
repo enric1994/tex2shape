@@ -1,7 +1,9 @@
 .idea/
 .DS_Store
 
+vendor/smpl/
 !vendor/smpl/__init__.py
+out/
 
 __pycache__/
 *.py[cod]

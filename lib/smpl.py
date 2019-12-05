@@ -1,4 +1,4 @@
-#!/usr/bin/env python2
+#!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 
 import sys
@@ -11,7 +11,7 @@ from chumpy.ch import Ch
 from vendor.smpl.posemapper import posemap, Rodrigues
 from vendor.smpl.serialization import backwards_compatibility_replacements
 
-from ch_ext import sp_dot
+from .ch_ext import sp_dot
 
 if sys.version_info[0] == 3:
     import _pickle as pkl
@@ -76,7 +76,7 @@ class Smpl(Ch):
 
         body_height = (self.v_shaped[2802, 1] + self.v_shaped[6262, 1]) - (
                 self.v_shaped[2237, 1] + self.v_shaped[6728, 1])
-        self.scale = 1.66 / body_height
+        self.scale = 1.66 / float(body_height)
 
         self.v_shaped_personal = self.scale * self.v_shaped + self.v_personal
 

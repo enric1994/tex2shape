@@ -19,12 +19,12 @@ services:
   densepose:
     image: densepose
     container_name: densepose
-    working_dir: /detectron2_repo/projects/DensePose
+    working_dir: /densepose
     build:
       context: ../
       dockerfile: docker/Dockerfile.densepose
     volumes:
-      - ../:/densepose
+      - ../:/data
     runtime: nvidia
     command: tail /dev/null -f
 

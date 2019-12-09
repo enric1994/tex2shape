@@ -19,7 +19,7 @@ RUN apt-get install -y --no-install-recommends \
       python-dev \
       python-pip   
 RUN pip install setuptools                       
-RUN pip install --user \
+RUN pip install -U \
 	future \
 	numpy==1.14.0 \
 	protobuf==3.5.1 \
@@ -81,6 +81,7 @@ RUN bash get_densepose_uv.sh
 
 WORKDIR /densepose
 
+RUN pip install -U protobuf
 #RUN apt update -y; apt install -y wget
 
 # bash get_densepose_uv.sh
